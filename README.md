@@ -1,5 +1,7 @@
 # TrendRider Strategy
 
+![TrendRider Strategy — open-source Freqtrade bot with live public stats](banner.png)
+
 Open-source Freqtrade strategy from the [TrendRider](https://trendrider.net) crypto trading bot.
 
 **See it run live (real money, dry-run mode) →** [trendrider.net/live](https://trendrider.net/live)
