@@ -1,0 +1,86 @@
+# TrendRider Strategy
+
+Open-source Freqtrade strategy from the [TrendRider](https://trendrider.net) crypto trading bot.
+
+**See it run live (real money, dry-run mode) →** [trendrider.net/live](https://trendrider.net/live)
+
+The `/live` page exposes the bot's actual SQLite — including losing exit reasons. This repo lets you run the same strategy yourself.
+
+---
+
+## Philosophy
+
+Ride established trends with a **wide stoploss**. Crypto swings 2–4% per hour; tight stops get noise-killed. Default SL is 6% with ATR-aware widening.
+
+Confidence scoring layers six signals (EMA cross, RSI, ADX, volume, BB position, MACD histogram) into a 0–100 score. Entries require ≥ a tunable threshold.
+
+Cascading early loss cut (V4) closes positions that fail to recover within 4h, instead of waiting for the hard SL.
+
+## Backtest highlights (BTC/ETH/SOL · 1h · 30 days)
+
+| Metric | V3 baseline | **V4 (this repo)** |
+|---|---|---|
+| Total profit | — | **+69% vs V3** |
+| Max drawdown | — | **−77% vs V3** |
+| Timeframe | 1h | 1h |
+
+V4 was validated against V5 (breakeven exit) and V6 (relaxed 4h cut) — both rejected via backtest. V4 is the local optimum as of 2026-04-14.
+
+For current live performance see [trendrider.net/live](https://trendrider.net/live).
+
+## Install
+
+```bash
+# 1. Install Freqtrade (requires Python 3.10+)
+pip install freqtrade
+
+# 2. Clone this repo
+git clone https://github.com/darkvolg/trendrider-strategy.git
+cd trendrider-strategy
+
+# 3. Init Freqtrade user_data
+freqtrade create-userdir --userdir user_data
+
+# 4. Drop in the strategy
+cp TrendRiderStrategy.py user_data/strategies/
+
+# 5. Use the sample config (dry-run by default)
+cp config.example.json user_data/config.json
+
+# 6. Download data + backtest
+freqtrade download-data --exchange bybit --pairs BTC/USDT:USDT ETH/USDT:USDT SOL/USDT:USDT --timeframes 1h --days 30
+freqtrade backtesting --strategy TrendRiderStrategy --timerange=20260315-20260414
+```
+
+## Going live
+
+The shipped config runs in **dry-run mode** (no real orders). To trade for real:
+
+1. Set `"dry_run": false` in `config.example.json`
+2. Add Bybit API key/secret (futures, isolated margin)
+3. Start with the smallest possible `stake_amount`
+4. Run for at least 7 days dry-run first
+
+You can verify the strategy behaves identically to the live bot by comparing your dry-run trades to [trendrider.net/live](https://trendrider.net/live).
+
+## What's not in this repo
+
+The production bot adds a few private layers that aren't open-sourced:
+
+- Fear & Greed Index API integration
+- Bybit funding rate / OI signals
+- On-chain whale alerts
+- Telegram notifications + Cornix routing
+- SQLite price-alert layer
+
+All of those are stubbed out here with neutral defaults — the public strategy still trades, just without the external boosts.
+
+## License
+
+MIT — use it, fork it, paper-trade it. Don't blame me if you lose money.
+
+## Links
+
+- **Live stats:** [trendrider.net/live](https://trendrider.net/live)
+- **Blog:** [trendrider.net/blog](https://trendrider.net/blog)
+- **Freqtrade docs:** [freqtrade.io](https://www.freqtrade.io)
