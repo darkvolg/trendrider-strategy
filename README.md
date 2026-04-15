@@ -1,6 +1,13 @@
 # TrendRider Strategy
 
+[![GitHub stars](https://img.shields.io/github/stars/darkvolg/trendrider-strategy?style=social)](https://github.com/darkvolg/trendrider-strategy/stargazers)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Live stats](https://img.shields.io/badge/live%20stats-trendrider.net%2Flive-10b981)](https://trendrider.net/live)
+[![Freqtrade](https://img.shields.io/badge/freqtrade-compatible-blue)](https://www.freqtrade.io/)
+
 ![TrendRider Strategy — open-source Freqtrade bot with live public stats](banner.png)
+
+> **⭐ If this strategy helps you, please [star the repo](https://github.com/darkvolg/trendrider-strategy)** — it takes one click and keeps me motivated to push updates publicly.
 
 Open-source Freqtrade strategy from the [TrendRider](https://trendrider.net) crypto trading bot.
 
@@ -76,6 +83,16 @@ The production bot adds a few private layers that aren't open-sourced:
 - SQLite price-alert layer
 
 All of those are stubbed out here with neutral defaults — the public strategy still trades, just without the external boosts.
+
+## Support the project
+
+This strategy is free and will stay free. If it's useful to you:
+
+- ⭐ **[Star the repo](https://github.com/darkvolg/trendrider-strategy)** — the single biggest signal that this work matters
+- 🐛 Open an issue if backtest numbers don't match yours
+- 🔀 Fork it, tune it, share what you find
+
+Every star visibly unblocks listings on awesome-lists and helps other traders discover open, honest strategies.
 
 ## License
 
