@@ -94,15 +94,11 @@ This strategy is free and will stay free. If it's useful to you:
 
 Every star visibly unblocks listings on awesome-lists and helps other traders discover open, honest strategies.
 
-## V4 Pro Pack — $19
+## Optional: V4 Pro Pack
 
-The base strategy in this repo is free forever (MIT). If you want the **tuned production hyperopt parameters** (the exact ones running live at [trendrider.net/live](https://trendrider.net/live)) plus a **30-day backtest report** (V3 vs V4 comparison, per-pair breakdown, profit factor 1.03 → 1.41, drawdown −6.12% → −1.42%), a **setup guide**, and the **full V1 → V4 changelog**, there's a Pro Pack for $19.
+The base strategy is free forever (MIT). A Pro Pack ($19) is available with tuned production hyperopt params, 30-day backtest report (V3 vs V4 comparison, profit factor 1.03 → 1.41, drawdown −6.12% → −1.42%), setup guide, and V1→V4 changelog — for those who want to skip their own hyperopt run. [Pay via @CryptoBot](https://t.me/CryptoBot?start=IVNZsppFp1Kr)
 
-**[Buy Pro Pack — $19 via @CryptoBot](https://t.me/CryptoBot?start=IVNZsppFp1Kr)** (accepts USDT / TON / USDC)
-
-Full refund within 30 days if the backtest numbers don't reproduce on your setup (±5% tolerance). Leave your Telegram @username or email as the invoice comment — you'll receive the zip within 24 hours.
-
-Full post-mortem of the V3 → V4 fix (13 days breakeven → one fix → +$6.42 in 8 hours): [trendrider.net/blog/freqtrade-bot-14-days-breakeven-v4-fix-2026](https://trendrider.net/blog/freqtrade-bot-14-days-breakeven-v4-fix-2026)
+Full post-mortem of the V3 → V4 fix: [trendrider.net/blog/freqtrade-bot-14-days-breakeven-v4-fix-2026](https://trendrider.net/blog/freqtrade-bot-14-days-breakeven-v4-fix-2026)
 
 ## License
 
