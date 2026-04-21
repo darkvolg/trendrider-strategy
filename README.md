@@ -1,13 +1,15 @@
 # TrendRider Strategy
 
+> ### ⭐ If you clone this repo, please give it a [star](https://github.com/darkvolg/trendrider-strategy) — it's the only payment this strategy asks for.
+>
+> GitHub tells me people actually clone and run this, but only a handful star it. One click, one second, and it's the signal I need to keep pushing updates publicly. Thanks.
+
 [![GitHub stars](https://img.shields.io/github/stars/darkvolg/trendrider-strategy?style=social)](https://github.com/darkvolg/trendrider-strategy/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Live stats](https://img.shields.io/badge/live%20stats-trendrider.net%2Flive-10b981)](https://trendrider.net/live)
 [![Freqtrade](https://img.shields.io/badge/freqtrade-compatible-blue)](https://www.freqtrade.io/)
 
 ![TrendRider Strategy — open-source Freqtrade bot with live public stats](banner.png)
-
-> **⭐ If this strategy helps you, please [star the repo](https://github.com/darkvolg/trendrider-strategy)** — it takes one click and keeps me motivated to push updates publicly.
 
 Open-source Freqtrade strategy from the [TrendRider](https://trendrider.net) crypto trading bot.
 
